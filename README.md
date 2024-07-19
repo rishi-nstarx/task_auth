@@ -1,5 +1,3 @@
-# task_auth
-
 <h1>Task Auth</h1>
 
 <p>This repository contains the code for the Task Auth application. Follow the instructions below to set up and run the application.</p>
