@@ -13,13 +13,13 @@
 <p>First, clone the repository to your local machine:</p>
 
 <pre><code>git clone https://github.com/rishi-nstarx/task_auth.git
-cd task_auth
 </code></pre>
 
 <h3>Build and Run the Application</h3>
 <p>Use Docker Compose to build and run the application:</p>
 
-<pre><code>docker-compose build
+<pre><code>cd auth_app
+docker-compose build
 docker-compose up
 </code></pre>
 
