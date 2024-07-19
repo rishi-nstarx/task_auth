@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block tittle %}Login Page{% endblock %}
+
+{% block content %}
+<h2>Login Form</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary">login</button>
+</form>
+<p>Did you forget your password?<a href="{% url 'forgot-password' %}">Reset here</a></p>
+<p>Don't have an account? <a href="{% url 'register' %}">Register Here</a></p>
+{% endblock %}

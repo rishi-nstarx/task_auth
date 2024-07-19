@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - my-postgres
+    environment:
+      DATABASE_URL: postgres://postgres:mypassword@my-postgres:5432/postgres_rishi
+      DJANGO_SECRET_KEY: H0BP28yc1A
+      EMAIL_HOST: smtp.gmail.com
+      EMAIL_PORT: 587
+      EMAIL_USE_TLS: 'true'
+      EMAIL_HOST_USER: rishiamzn22@gmail.com
+      EMAIL_HOST_PASSWORD: krwttvntpszkiyic
+
+  my-postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: postgres_rishi
+    ports:
+      - "5432:5432"

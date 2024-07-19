@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block tittle %}Home Page{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<h3>This is customized home page.</h3>
+{% comment %} <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary">login</button>
+</form>
+<p>Don't have an account? <a href="{% url 'register' %}">Register Here</a></p> {% endcomment %}
+{% endblock %}
