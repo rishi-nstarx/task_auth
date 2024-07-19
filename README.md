@@ -18,7 +18,7 @@
 <h3>Build and Run the Application</h3>
 <p>Use Docker Compose to build and run the application:</p>
 
-<pre><code>cd auth_app
+<pre><code>cd auth_project
 docker-compose build
 docker-compose up
 </code></pre>
